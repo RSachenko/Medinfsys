@@ -1,0 +1,48 @@
+﻿<Window x:Class="Medinfsys2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Medinfsys2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid>
+        <!-- Главное меню -->
+        <Menu>
+            <MenuItem Header="_Расписание">
+                <MenuItem Header="_Просмотр расписания"/>
+                <MenuItem Header="_Редактирование расписания"/>
+            </MenuItem>
+            <MenuItem Header="_Пациенты">
+                <MenuItem Header="_Список пациентов"/>
+                <MenuItem Header="_Регистрация пациента"/>
+            </MenuItem>
+            <MenuItem Header="_Медицинские документы">
+                <MenuItem Header="_Просмотр документов"/>
+                <MenuItem Header="_Оформление документа"/>
+            </MenuItem>
+            <MenuItem Header="_Пользователи">
+                <MenuItem Header="_Управление пользователями"/>
+                <MenuItem Header="_Права доступа"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- Панели для отображения данных -->
+        <Grid Grid.Row="1">
+            <!-- Панель для отображения расписания -->
+            <Border Name="SchedulePanel" Grid.Column="0" BorderBrush="Black" BorderThickness="1">
+                <!-- Здесь можно добавить элементы для отображения расписания -->
+            </Border>
+
+            <!-- Панель для отображения списка пациентов -->
+            <Border Name="PatientsPanel" Grid.Column="1" BorderBrush="Black" BorderThickness="1">
+                <!-- Здесь можно добавить элементы для отображения списка пациентов -->
+            </Border>
+
+            <!-- Панель для отображения медицинских документов -->
+            <Border Name="DocumentsPanel" Grid.Column="2" BorderBrush="Black" BorderThickness="1">
+                <!-- Здесь можно добавить элементы для отображения медицинских документов -->
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

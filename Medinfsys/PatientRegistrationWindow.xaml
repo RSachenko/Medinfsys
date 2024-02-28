@@ -1,0 +1,36 @@
+﻿<Window x:Class="Medinfsys.PatientRegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Medinfsys"
+        mc:Ignorable="d"
+        Title="PatientRegistrationWindow" Height="1080" Width="1920">
+    <Grid>
+        <DataGrid x:Name="Patients" Margin="104,147,103,315" AutoGenerateColumns="False" SelectionChanged="Patients_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding MiddleName}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Паспортные данные" Binding="{Binding PassportNumber}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding BirthDate}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Пол" Binding="{Binding Gender}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Адрес" Binding="{Binding Address}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Телефонный номер" Binding="{Binding PhoneNumber}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Электронный адрес" Binding="{Binding Email}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Номер медицинской карты" Binding="{Binding MedicalCardNumber}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Дата выдачи мед карты" Binding="{Binding MedicalCardIssueDate}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Дата последнего обращения" Binding="{Binding LastVisitDate}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Дата следующего визита" Binding="{Binding NextVisitDate}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Номер Страх. полиса" Binding="{Binding InsurancePolicyNumber}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Дата Оконч. Полиса" Binding="{Binding InsurancePolicyExpirationDate}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Диагноз" Binding="{Binding Diagnosis}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="История болезни" Binding="{Binding MedicalHistory}" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Добавить нового пациента" Click="AddNewPatient_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,815,0,0" Height="80" Width="348" Background="#FF41B2CB" BorderBrush="White" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Зарегистрированные пациенты" VerticalAlignment="Top" FontSize="48"/>
+        <Button x:Name="QrButton" Content="Назад" HorizontalAlignment="Left" Margin="104,32,0,0" VerticalAlignment="Top" Height="80" Width="195" FontSize="24" BorderBrush="White" Background="#FF41B2CB" Click="Button_Click"/>
+        <Button Content="QR-Code" HorizontalAlignment="Center" Height="80" Margin="0,926,0,0" VerticalAlignment="Top" Width="348" Background="#FF41B2CB" BorderBrush="White" FontSize="24" Click="Button_Click_1"/>
+    </Grid>
+</Window>

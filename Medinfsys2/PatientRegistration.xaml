@@ -1,0 +1,29 @@
+﻿<Window x:Class="Medinfsys2.PatientRegistration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Medinfsys2"
+        mc:Ignorable="d"
+        Title="PatientRegistration" Height="1080" Width="1920">
+    <Grid>
+        <StackPanel Margin="10">
+            <Label Content="Имя:"/>
+            <TextBox Name="txtFirstName"/>
+
+            <Label Content="Фамилия:"/>
+            <TextBox Name="txtLastName"/>
+
+            <Label Content="Дата рождения:"/>
+            <DatePicker Name="dpBirthDate"/>
+
+            <Label Content="Контактная информация:"/>
+            <TextBox Name="txtContactInfo"/>
+
+            <Label Content="Медицинская история:"/>
+            <TextBox Name="txtMedicalHistory"/>
+
+            <Button Content="Зарегистрировать" Click="RegisterPatient_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
